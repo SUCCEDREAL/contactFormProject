@@ -1,0 +1,383 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.body {
+  background-color: grey;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Home Container */
+.homeContainer {
+  text-align: center;
+  height: 80vh;
+  margin-top: 80px;
+}
+.welcome {
+  font-size: 50px;
+  color: rgb(91, 57, 231);
+  margin-bottom: 20px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.signupButton {
+  padding: 20px 30px;
+  border-radius: 10px;
+  background-color: white;
+  color: rgb(91, 57, 231);
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 1.8s all ease-in-out;
+  border: rgb(91, 57, 231) solid 3px;
+}
+
+.signupButton a {
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.signupButton:hover {
+  background-color: rgb(91, 57, 231);
+  border: 1px solid white;
+  a {
+    color: white;
+  }
+}
+
+.loginButton {
+  padding: 20px 30px;
+  border-radius: 10px;
+  background-color: rgb(91, 57, 231);
+  cursor: pointer;
+  font-weight: bold;
+  transition: 1.8s all ease-in-out;
+  border: none;
+}
+
+.loginButton a {
+  text-decoration: none;
+  font-size: 30px;
+  color: white;
+}
+
+.loginButton:hover {
+  background-color: white;
+  border: rgb(91, 57, 231) solid 3px;
+  a {
+    color: rgb(91, 57, 231);
+  }
+}
+
+/* Sign Up Container */
+.signup-container {
+  width: 600px;
+  background-color: white;
+  box-shadow: 1px 2px 15px blue;
+  padding: 0 20px;
+  border-radius: 5px;
+  margin: 20px 400px;
+  justify-content: center;
+  padding: 30px;
+}
+
+/* sign-up header  */
+.header-signup {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  /* margin-bottom: 150px; */
+}
+
+.headerImg {
+  color: rgb(91, 57, 231);
+  font-size: 20px;
+}
+
+.imgText {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.headerTwo {
+  margin-left: 100px;
+}
+
+.headerTwo a {
+  text-align: center;
+  text-decoration: none;
+}
+
+.headerTwo a:hover {
+  text-decoration: underline;
+}
+
+.createText {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.createText h1 {
+  font-size: 25px;
+  color: rgb(91, 57, 231);
+}
+
+.createText p {
+  font-size: 12px;
+  color: grey;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 50px;
+}
+
+.input-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.form-group input {
+  padding-left: 40px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.terms {
+  font-size: 12px;
+  color: grey;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.terms a {
+  color: rgb(91, 57, 231);
+  text-decoration: none;
+  text-align: center;
+}
+.terms a:hover {
+  text-decoration: underline;
+}
+
+.createBtn button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(91, 57, 231);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.2s ease-in-out;
+}
+
+.createBtn button:hover {
+  background-color: rgb(30, 9, 110);
+  color: beige;
+}
+
+.line {
+  width: 150px;
+}
+
+.altSignUp {
+  display: flex;
+  /* text-align: center; */
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.altlogo {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+}
+.googleBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 50px;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid #888;
+  transition: 0.2s ease-in-out;
+}
+
+.googleBtn:hover {
+  border-color: red solid 5px;
+}
+
+.google {
+  width: 40px;
+}
+
+.googleText {
+  font-size: 25px;
+}
+
+.appleBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 50px;
+  border-radius: 10px;
+  background-color: white;
+  border-color: rgb(91, 57, 231) solid 5px;
+}
+
+.apple {
+  width: 40px;
+}
+
+.appleText {
+  font-size: 25px;
+}
+
+/* Login-Container */
+.login-container {
+  display: flex;
+  /* gap: 100px; */
+  /* width: 100%; */
+  height: 100vh;
+}
+
+.login-text {
+  background-color: rgb(30, 9, 110);
+  justify-content: center;
+  color: white;
+  padding: 200px 100px;
+  text-align: center;
+  align-items: center;
+  display: grid;
+  display: block;
+}
+
+.login-icon {
+  font-size: 90px;
+  margin-bottom: 20px;
+  text-align: center;
+
+  display: flex;
+}
+
+.login-text h2 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  /* padding: 0 200px; */
+}
+
+.login-text p {
+  font-size: 20px;
+  color: #ccc;
+  /* padding: 0 200px; */
+}
+
+.loginSection {
+  border-radius: 10px;
+  margin-right: 50px;
+  margin-top: 20px;
+  align-items: center;
+  width: 50%;
+}
+
+.logoImg {
+  width: 400px;
+  height: 300px;
+}
+
+.loginTextTwo {
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: rgb(91, 57, 231);
+}
+
+.login-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-icon {
+  position: absolute;
+  left: 138px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.login-group {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.login-group input {
+  width: 65%;
+  padding: 25px;
+  padding-left: 50px;
+  border: 2px solid rgb(91, 57, 231);
+  border-radius: 10px;
+  height: 40px;
+}
+
+.loginBtn {
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.loginBtn button {
+  padding: 5px 100px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(91, 57, 231);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s ease-in-out;
+}
+
+.loginBtn button:hover {
+  background-color: rgb(30, 9, 110);
+  color: beige;
+}
+
+.forgetText {
+  justify-content: center;
+  text-align: center;
+  margin-top: -10px;
+}
