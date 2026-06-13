@@ -21,18 +21,32 @@ function Signup() {
     setformData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSignup = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (formData.password !== formData.confirmPassword) {
+      console.error("Passwords do not match");
+      return;
+    }
+
     try {
-      const res = await fetch("https://contactform-backend-c2wa.onrender.com", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        credentials: "include",
-        body: JSON.stringify({ fullName, email, password }),
-      });
+      const res = await fetch(
+        "https://contactform-backend-c2wa.onrender.com/api/v1/signup",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+          body: JSON.stringify({
+            fullName: formData.fullName,
+            email: formData.email,
+            password: formData.password,
+          }),
+        },
+      );
       const data = await res.json();
       if (!res.ok) throw new Error(data.message);
       console.log("Signup success:", data);
+      navigate("/login");
     } catch (err) {
       console.error(err.message);
     }
@@ -41,7 +55,6 @@ function Signup() {
   return (
     <>
       <div className="signup-container">
-        {/* sign-up header */}
         <div className="header-signup">
           <div className="headerImg">
             <FontAwesomeIcon icon={faCircleCheck} />
@@ -65,8 +78,6 @@ function Signup() {
           <h1>Create your account </h1>
           <p>Let's get you started with your new account!</p>
         </div>
-
-        {/* sign-up form */}
 
         <form onSubmit={handleSubmit}>
           <div className="form-group">
@@ -103,6 +114,8 @@ function Signup() {
               name="password"
               placeholder="Password"
               required
+              value={formData.password}
+              onChange={handleChange}
             />
           </div>
 
@@ -114,18 +127,21 @@ function Signup() {
               name="confirmPassword"
               placeholder="Confirm Password"
               required
+              value={formData.confirmPassword}
+              onChange={handleChange}
             />
           </div>
 
           <p className="terms">
-            <input type="checkbox" id="terms" name="terms" required /> {""}
-            By signing up, you agree to our{" "}
-            <a href="/terms">Terms of Service</a> and{" "}
-            <a href="/privacy">Privacy Policy</a>.{/* </label> */}
+            <input type="checkbox" id="terms" name="terms" required /> By
+            signing up, you agree to our <a href="/terms">Terms of Service</a>{" "}
+            and <a href="/privacy">Privacy Policy</a>.
           </p>
 
           <div className="createBtn">
-            <button className="submit">Create Account</button>
+            <button className="submit" type="submit">
+              Create Account
+            </button>
           </div>
         </form>
 
@@ -167,7 +183,6 @@ function Signup() {
           </div>
         </div>
       </div>
-      ``
     </>
   );
 }

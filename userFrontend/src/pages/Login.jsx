@@ -12,19 +12,23 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("https://contactform-backend-c2wa.onrender.com", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        credentials: "include",
-        body: JSON.stringify({ email, password }),
-      });
+      const res = await fetch(
+        "https://contactform-backend-c2wa.onrender.com/api/v1/login",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+          body: JSON.stringify({ email, password }),
+        },
+      );
       const data = await res.json();
       if (!res.ok) throw new Error(data.message);
       console.log("Login success:", data);
       localStorage.setItem("token", data.token);
+      navigate("/dashboard"); // or wherever you want post-login
     } catch (err) {
       console.error(err.message);
     }
