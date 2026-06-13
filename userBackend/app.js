@@ -6,17 +6,15 @@ import authRoutes from "./src/routers/authRouter.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 
-import cors from "cors";
+const app = express();
+const port = process.env.PORT || 3030;
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "contact-form-project-xi.vercel.app",
     credentials: true,
   }),
 );
-
-const app = express();
-const port = process.env.PORT || 3030;
 
 // MIDDLEWARES
 app.use(express.json());
