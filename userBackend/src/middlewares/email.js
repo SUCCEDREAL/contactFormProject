@@ -13,10 +13,15 @@ export const sendEmail = async (option) => {
     family: 4,
   });
 
-  await transporter.sendMail({
-    from: process.env.SMTP_FROM,
-    to: option.to,
-    subject: option.subject,
-    html: option.html,
-  });
+  try {
+    await transporter.sendMail({
+      from: process.env.SMTP_FROM,
+      to: option.to,
+      subject: option.subject,
+      html: option.html,
+    });
+    console.log("Email sent");
+  } catch (error) {
+    console.log("EMAIL ERROR:", err);
+  }
 };

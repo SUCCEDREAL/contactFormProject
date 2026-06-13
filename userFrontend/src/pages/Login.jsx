@@ -12,18 +12,21 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await Api.login({ email, password });
-      if (response.token) {
-        localStorage.setItem("token", response.token);
-        alert("Login successful!");
-        console.log("Login successful:", response);
-        navigate("/dashboard");
-      }
-    } catch (error) {
-      console.error("Login failed", error);
+      const res = await fetch("http://localhost:3030/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify({ email, password }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.message);
+      console.log("Login success:", data);
+      localStorage.setItem("token", data.token);
+    } catch (err) {
+      console.error(err.message);
     }
   };
 

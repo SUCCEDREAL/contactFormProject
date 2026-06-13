@@ -21,26 +21,20 @@ function Signup() {
     setformData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => async (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
-
     try {
-      const response = await Api.post("/api/v1/signup", formData);
-
-      if (response.ok) {
-        console.log(response.data);
-        alert("Signup successful!");
-        navigate("/login");
-        // Handle successful signup (e.g., redirect to login page)
-      } else {
-        console.error("Signup failed:", response.data);
-        alert("Signup failed. Please try again.");
-        // Handle signup failure (e.g., display error message)
-      }
-    } catch (error) {
-      console.error("Error occurred while signing up:", error);
-      alert("Signup failed. Please try again.");
-      // Handle signup error (e.g., display error message)
+      const res = await fetch("http://localhost:3030/api/Signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify({ fullName, email, password }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.message);
+      console.log("Signup success:", data);
+    } catch (err) {
+      console.error(err.message);
     }
   };
 
