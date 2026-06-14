@@ -77,7 +77,7 @@ function Signup() {
         </div>
 
         <div className="signupImage">
-          <img src="../src/assets/signup.png" alt="Signup" />
+          <img src={signupImg} alt="Signup" />
         </div>
         <div className="createText">
           <h1>Create your account </h1>
@@ -167,22 +167,14 @@ function Signup() {
         <div className="altlogo">
           <div className="googleLogo">
             <button className="googleBtn">
-              <img
-                src="../src/assets/google_logo.png"
-                alt="Google"
-                className="google"
-              />{" "}
+              <img src={googleLogo} alt="Google" className="google" />{" "}
               <p className="googleText">Google</p>
             </button>
           </div>
 
           <div className="appleLogo">
             <button className="appleBtn">
-              <img
-                src="../src/assets/Apple_logo.png"
-                alt="Apple"
-                className="apple"
-              />{" "}
+              <img src={appleLogo} alt="Apple" className="apple" />{" "}
               <p className="appleText">Apple</p>
             </button>
           </div>

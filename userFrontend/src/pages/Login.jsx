@@ -47,11 +47,7 @@ const Login = () => {
       <div className="loginSection">
         <div className="loginTextTwo">
           <h3>Login to Your Account</h3>
-          <img
-            src="../src/assets/loginImage.png"
-            alt="Login"
-            className="logoImg"
-          />
+          <img src={logoImg} alt="Login" className="logoImg" />
         </div>
 
         <form onSubmit={handleSubmit}>
