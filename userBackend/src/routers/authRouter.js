@@ -4,7 +4,7 @@ import { sendEmail } from "../middlewares/email.js";
 
 export const router = express.Router();
 
-router.post("/signup", Signup);
+router.post("/signup", signup);
 router.post("/login", login);
 router.get("/newUser", sendEmail, (req, res) => {
   res
