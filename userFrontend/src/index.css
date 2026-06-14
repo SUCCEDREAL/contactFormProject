@@ -5,6 +5,11 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
 .body {
   background-color: grey;
   width: 100vw;
@@ -16,12 +21,18 @@
 /* Home Container */
 .homeContainer {
   text-align: center;
-  height: 80vh;
-  margin-top: 80px;
+  height: 100vh;
+  padding-top: 80px;
+  background: linear-gradient(
+    135deg,
+    rgb(30, 9, 110) 0%,
+    rgb(91, 57, 231) 50%,
+    rgb(150, 110, 255) 100%
+  );
 }
 .welcome {
   font-size: 50px;
-  color: rgb(91, 57, 231);
+  color: white;
   margin-bottom: 20px;
 }
 
@@ -81,15 +92,16 @@
 }
 
 /* Sign Up Container */
+
 .signup-container {
   width: 600px;
   background-color: white;
   box-shadow: 1px 2px 15px blue;
-  padding: 0 20px;
+  padding: 30px 20px;
   border-radius: 5px;
   margin: 20px 400px;
   justify-content: center;
-  padding: 30px;
+  text-align: center;
 }
 
 /* sign-up header  */
