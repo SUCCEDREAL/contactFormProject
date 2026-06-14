@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import logoImg from "../assets/loginImage.png";
 import {
   faEnvelope,
   faLock,

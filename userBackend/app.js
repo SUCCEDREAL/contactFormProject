@@ -11,7 +11,10 @@ const port = process.env.PORT || 3030;
 
 app.use(
   cors({
-    origin: "contact-form-project-xi.vercel.app",
+    origin: [
+      "http://localhost:5173",
+      "https://contact-form-project-xi.vercel.app",
+    ],
     credentials: true,
   }),
 );

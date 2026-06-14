@@ -1,4 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import signupImg from "../assets/signup.png";
+import googleLogo from "../assets/google logo.png";
+import appleLogo from "../assets/apple logo.png";
 import {
   faCircleCheck,
   faUser,

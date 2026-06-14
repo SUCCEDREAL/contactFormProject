@@ -4,7 +4,7 @@ import { sendEmail } from "../middlewares/email.js";
 import jwt from "jsonwebtoken";
 
 // SIGNUP NEW USER
-export const Signup = async (req, res) => {
+export const signup = async (req, res) => {
   try {
     const { fullName, email, password } = req.body;
     if (!fullName || !email || !password) {
