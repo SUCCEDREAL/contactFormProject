@@ -50,7 +50,7 @@ body {
   font-size: 20px;
   cursor: pointer;
   font-weight: bold;
-  transition: 1.8s all ease-in-out;
+  transition: 0.2s all ease-in-out;
   border: rgb(91, 57, 231) solid 3px;
 }
 
@@ -61,7 +61,7 @@ body {
 
 .signupButton:hover {
   background-color: rgb(91, 57, 231);
-  border: 1px solid white;
+  border: 3px solid white;
   a {
     color: white;
   }
@@ -73,8 +73,8 @@ body {
   background-color: rgb(91, 57, 231);
   cursor: pointer;
   font-weight: bold;
-  transition: 1.8s all ease-in-out;
-  border: none;
+  transition: 0.2s all ease-in-out;
+  border: white 4px solid;
 }
 
 .loginButton a {
