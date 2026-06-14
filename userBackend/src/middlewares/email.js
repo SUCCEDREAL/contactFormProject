@@ -22,6 +22,6 @@ export const sendEmail = async (option) => {
     });
     console.log("Email sent");
   } catch (error) {
-    console.log("EMAIL ERROR:", err);
+    console.log("EMAIL ERROR:", error);
   }
 };
