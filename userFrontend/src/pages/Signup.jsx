@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import signupImg from "../assets/signup.png";
 import googleLogo from "../assets/google_logo.png";
-import appleLogo from "../assets/apple_logo.png";
+import appleLogo from "../assets/Apple_logo.png";
 import {
   faCircleCheck,
   faUser,
@@ -179,7 +179,7 @@ function Signup() {
           <div className="appleLogo">
             <button className="appleBtn">
               <img
-                src="../src/assets/apple_logo.png"
+                src="../src/assets/Apple_logo.png"
                 alt="Apple"
                 className="apple"
               />{" "}
