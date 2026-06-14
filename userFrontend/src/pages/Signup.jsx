@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import signupImg from "../assets/signup.png";
-import googleLogo from "../assets/google logo.png";
-import appleLogo from "../assets/apple logo.png";
+import googleLogo from "../assets/google_logo.png";
+import appleLogo from "../assets/apple_logo.png";
 import {
   faCircleCheck,
   faUser,
@@ -168,7 +168,7 @@ function Signup() {
           <div className="googleLogo">
             <button className="googleBtn">
               <img
-                src="../src/assets/google logo.png"
+                src="../src/assets/google_logo.png"
                 alt="Google"
                 className="google"
               />{" "}
@@ -179,7 +179,7 @@ function Signup() {
           <div className="appleLogo">
             <button className="appleBtn">
               <img
-                src="../src/assets/apple logo.png"
+                src="../src/assets/apple_logo.png"
                 alt="Apple"
                 className="apple"
               />{" "}
