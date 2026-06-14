@@ -50,6 +50,7 @@ export const signup = async (req, res) => {
       .status(201)
       .json({ message: "User created successfully", user: newUser });
   } catch (error) {
+    console.error("SIGNUP ERROR:", error);
     res
       .status(500)
       .json({ message: "Error occurred while accessing signup page", error });
