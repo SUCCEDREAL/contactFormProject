@@ -50,6 +50,7 @@ function Signup() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.message);
       console.log("Signup success:", data);
+      console.log("Signup success:", data);
       navigate("/login");
     } catch (err) {
       console.error(err.message);
