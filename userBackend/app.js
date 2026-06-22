@@ -1,5 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
+import dns from "dns";
+dns.setServers(["8.8.8.8", "8.8.4.4"]); // ✅ force Google DNS for Node's resolver
 import express from "express";
 import mongoose from "mongoose";
 import authRoutes from "./src/routers/authRouter.js";

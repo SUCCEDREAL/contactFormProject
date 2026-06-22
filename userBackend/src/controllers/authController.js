@@ -43,18 +43,15 @@ export const signup = async (req, res) => {
       .json({ message: "User created successfully", user: newUser });
   } catch (error) {
     console.error("SIGNUP ERROR:", error);
-    res
-      .status(500)
-      .json({
-        message: "Error occurred while accessing signup page",
-        error: error.message,
-      });
+    res.status(500).json({
+      message: "Error occurred while accessing signup page",
+      error: error.message,
+    });
   }
 };
 
 // login User
 export const login = async (req, res) => {
-  // ← added export, renamed to match router
   try {
     const { email, password } = req.body;
     if (!email || !password) {
@@ -75,7 +72,7 @@ export const login = async (req, res) => {
     // compare password
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
-      console.log("MATCH:", isMatch);
+      console.log("MATCH: fasle", isMatch);
       return res.status(401).json({ message: "Invalid email or password" });
     }
 
